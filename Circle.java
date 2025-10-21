@@ -1,5 +1,6 @@
 import Point.java;
 
+
 public class Circle {
     point center;
     double radius;
@@ -23,5 +24,9 @@ public class Circle {
 
     public double perimeter() {
         return 2 * Math.PI * radius;
+    }
+
+    public boolean isPointOnCircle(Point p) {
+        return center.distance(p) == radius;
     }
 }
