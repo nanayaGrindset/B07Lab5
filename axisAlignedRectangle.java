@@ -2,19 +2,19 @@ package B07Lab5;
 
 import java.lang.Math;
 
-public class Rectangle{
+public class axisAlignedRectangle{
 
     // the Point variable keeps track of the top left corner of the rectangle
     Point p;
     double width, height;
 
-    public Rectangle() {
+    public axisAlignedRectangle() {
         p = new Point(0, 0);
         width = 0;
         height = 0;
     }
 
-    public Rectangle(double x, double y, double width, double height) throws Exception {
+    public axisAlignedRectangle(double x, double y, double width, double height) throws Exception {
 
         if (width < 0) {
             throw new Exception("width cannot be negative");
