@@ -1,31 +1,32 @@
-package B07Lab5;
+import Point.java;
+
 
 public class Circle {
-    Point a;
-    Point b;
+    point center;
+    double radius;
 
-    public Circle(Point a, Point b) {
-        this.a = a;
-        this.b = b;
+    public Circle(Point center, double radius) {
+        this.center = center;
+        this.radius = radius;
     }
 
     public Point getCenter() {
-        return new Point((a.x + b.x) / 2, (a.y + b.y) / 2);
+        return center;
     }
 
     public double getRadius() {
-        return a.distance(b) / 2;
+        return radius;
     }
 
     public double area() {
-        return Math.PI * Math.pow(getRadius(), 2);
+        return Math.PI * radius * radius;
     }
 
     public double perimeter() {
-        return 2 * Math.PI * getRadius();
+        return 2 * Math.PI * radius;
     }
 
     public boolean isPointOnCircle(Point p) {
-        return Double.compare(getCenter().distance(p), getRadius()) == 0;
+        return center.distance(p) == radius;
     }
 }
