@@ -2,7 +2,7 @@ package B07Lab5;
 
 import java.lang.Math;
 
-public class axisAlignedRectangle{
+public class axisAlignedRectangle {
 
     // the Point variable keeps track of the top left corner of the rectangle
     Point p;
@@ -12,6 +12,23 @@ public class axisAlignedRectangle{
         p = new Point(0, 0);
         width = 0;
         height = 0;
+    }
+
+    public axisAlignedRectangle(Point p, double width, double height) throws Exception {
+
+        if (width < 0) {
+            throw new Exception("width cannot be negative");
+        }
+
+        if (height < 0) {
+            throw new Exception("height cannot be negative");
+        }
+
+        this.p = new Point(p.x, p.y);
+
+        this.width = width;
+        this.height = height;
+
     }
 
     public axisAlignedRectangle(double x, double y, double width, double height) throws Exception {
