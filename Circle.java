@@ -1,8 +1,8 @@
 package B07Lab5;
 
 public class Circle {
-    public Point a;
-    public Point b;
+    Point a;
+    Point b;
 
     public Circle(Point a, Point b) {
         this.a = a;

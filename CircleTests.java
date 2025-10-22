@@ -1,5 +1,4 @@
-import B07Lab5.Circle;
-import B07Lab5.Point;
+package B07Lab5;
 
 import org.junit.Assert;
 import org.junit.Test;
